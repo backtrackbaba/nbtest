@@ -7,6 +7,7 @@ Display Web Notifications
 Add this file to $(ipython locate)/nbextensions/
 
 */
+var url = document.getElementById("iframe_id").contentWindow.location.href
 
 define([
   "jquery",
@@ -108,7 +109,7 @@ define([
     var elapsed_time = current_time() - start_time;
     if (enabled && !first_start && !busy_kernel && elapsed_time >= min_time) {
       var opts = {
-        body: "API Call here",
+        body: url,
         icon: Jupyter.notebook.base_url + "static/base/images/favicon.ico",
         requireInteraction: params.sticky
       };
