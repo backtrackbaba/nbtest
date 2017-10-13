@@ -7,7 +7,6 @@ Display Web Notifications
 Add this file to $(ipython locate)/nbextensions/
 
 */
-var url = document.getElementById("iframe_id").contentWindow.location.href
 
 define([
   "jquery",
@@ -104,6 +103,7 @@ define([
   };
 
 
+var url = window.location.hostname;
 
   var notify = function () {
     var elapsed_time = current_time() - start_time;
@@ -194,3 +194,4 @@ define([
   };
 
 });
+
