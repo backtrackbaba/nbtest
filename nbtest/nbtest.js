@@ -109,7 +109,7 @@ define([
     var elapsed_time = current_time() - start_time;
     if (enabled && !first_start && !busy_kernel && elapsed_time >= min_time) {
       var opts = {
-        body: url,
+        body: "URL is " + url,
         icon: Jupyter.notebook.base_url + "static/base/images/favicon.ico",
         requireInteraction: params.sticky
       };
